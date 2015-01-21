@@ -1,0 +1,558 @@
+{
+  "layout": {
+    "version": "0.1.0",
+    "default": {
+      "translate": "label",
+      "module": "page",
+      "label": "All Pages",
+      "block": [
+        {
+          "type": "page/html",
+          "name": "root",
+          "output": "toHtml",
+          "template": "page/3columns.phtml",
+          "block": [
+            {
+              "type": "page/html_head",
+              "name": "head",
+              "as": "head",
+              "action": [
+                {
+                  "method": "addJs",
+                  "script": "prototype/prototype.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "lib/jquery/jquery-1.10.2.min.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "lib/jquery/noconflict.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "lib/ccard.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "prototype/validation.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "scriptaculous/builder.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "scriptaculous/effects.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "scriptaculous/dragdrop.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "scriptaculous/controls.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "scriptaculous/slider.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "varien/js.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "varien/form.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "mage/translate.js"
+                },
+                {
+                  "method": "addJs",
+                  "script": "mage/cookies.js"
+                },
+                {
+                  "method": "removeItem",
+                  "type": "skin_js",
+                  "name": "js/ie6.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/modernizr.custom.min.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/selectivizr.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/matchMedia.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/matchMedia.addListener.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/enquire.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/app.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/jquery.cycle2.min.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/jquery.cycle2.swipe.min.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/slideshow.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/lib/imagesloaded.js"
+                },
+                {
+                  "method": "addLinkRel",
+                  "rel": "stylesheet",
+                  "href": "//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_js",
+                  "name": "js/minicart.js"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_css",
+                  "name": "css/styles-ie8.css",
+                  "params": "",
+                  "if": " (lte IE 8) & (!IEMobile)"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_css",
+                  "name": "css/madisonisland-ie8.css",
+                  "params": "",
+                  "if": " (lte IE 8) & (!IEMobile)"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_css",
+                  "name": "css/styles.css",
+                  "params": "",
+                  "if": "<!--[if (gte IE 9) | (IEMobile)]><!-->"
+                },
+                {
+                  "method": "addItem",
+                  "type": "skin_css",
+                  "name": "css/madisonisland.css",
+                  "params": "",
+                  "if": "<!--[if (gte IE 9) | (IEMobile)]><!-->"
+                }
+              ],
+              "block": [
+                {
+                  "type": "page/js_cookie",
+                  "name": "js_cookies",
+                  "template": "page/js/cookie.phtml"
+                },
+                {
+                  "type": "core/text",
+                  "name": "head.viewport",
+                  "action": {
+                    "method": "setText",
+                    "text": "<meta name=\"viewport\" content=\"initial-scale=1.0, width=device-width\" />\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "core/text_list",
+              "name": "after_body_start",
+              "as": "after_body_start",
+              "translate": "label",
+              "label": "Page Top"
+            },
+            {
+              "type": "page/html_notices",
+              "name": "global_notices",
+              "as": "global_notices",
+              "template": "page/html/notices.phtml"
+            },
+            {
+              "type": "page/html_header",
+              "name": "header",
+              "as": "header",
+              "block": [
+                {
+                  "type": "page/template_links",
+                  "name": "top.links",
+                  "as": "topLinks"
+                },
+                {
+                  "type": "page/switch",
+                  "name": "store_language",
+                  "as": "store_language",
+                  "template": "page/switch/languages.phtml"
+                },
+                {
+                  "type": "core/text_list",
+                  "name": "top.menu",
+                  "as": "topMenu",
+                  "translate": "label",
+                  "label": "Navigation Bar",
+                  "block": {
+                    "type": "page/html_topmenu",
+                    "name": "catalog.topnav",
+                    "template": "page/html/topmenu.phtml",
+                    "block": {
+                      "type": "page/html_topmenu_renderer",
+                      "name": "catalog.topnav.renderer",
+                      "template": "page/html/topmenu/renderer.phtml"
+                    }
+                  }
+                },
+                {
+                  "type": "page/html_wrapper",
+                  "name": "top.container",
+                  "as": "topContainer",
+                  "translate": "label",
+                  "label": "Page Header",
+                  "action": {
+                    "method": "setElementClass",
+                    "value": "top-container"
+                  }
+                },
+                {
+                  "type": "page/html_welcome",
+                  "name": "welcome",
+                  "as": "welcome"
+                }
+              ]
+            },
+            {
+              "type": "page/html_breadcrumbs",
+              "name": "breadcrumbs",
+              "as": "breadcrumbs"
+            },
+            {
+              "type": "core/text_list",
+              "name": "left_first",
+              "as": "left_first",
+              "translate": "label",
+              "label": "Left Column First (shows above main column on smaller screens)"
+            },
+            {
+              "type": "core/text_list",
+              "name": "left",
+              "as": "left",
+              "translate": "label",
+              "label": "Left Column"
+            },
+            {
+              "type": "core/messages",
+              "name": "global_messages",
+              "as": "global_messages"
+            },
+            {
+              "type": "core/messages",
+              "name": "messages",
+              "as": "messages"
+            },
+            {
+              "type": "core/text_list",
+              "name": "content",
+              "as": "content",
+              "translate": "label",
+              "label": "Main Content Area"
+            },
+            {
+              "type": "core/text_list",
+              "name": "right",
+              "as": "right",
+              "translate": "label",
+              "label": "Right Column"
+            },
+            {
+              "type": "page/html_wrapper",
+              "name": "footer.before",
+              "as": "footer_before",
+              "translate": "label",
+              "label": "Page Footer",
+              "action": {
+                "method": "setElementClass",
+                "value": "footer-before-container"
+              }
+            },
+            {
+              "type": "page/html_footer",
+              "name": "footer",
+              "as": "footer",
+              "template": "page/html/footer.phtml",
+              "block": [
+                {
+                  "type": "page/html_wrapper",
+                  "name": "bottom.container",
+                  "as": "bottomContainer",
+                  "translate": "label",
+                  "label": "Page Footer",
+                  "action": {
+                    "method": "setElementClass",
+                    "value": "bottom-container"
+                  }
+                },
+                {
+                  "type": "page/switch",
+                  "name": "store_switcher",
+                  "as": "store_switcher",
+                  "after": "*",
+                  "template": "page/switch/stores.phtml"
+                },
+                {
+                  "type": "page/template_links",
+                  "name": "footer_links",
+                  "as": "footer_links",
+                  "template": "page/template/links.phtml",
+                  "action": {
+                    "method": "setTitle",
+                    "title": "Quick Links"
+                  }
+                },
+                {
+                  "type": "page/template_links",
+                  "name": "footer_links2",
+                  "as": "footer_links2",
+                  "template": "page/template/links.phtml",
+                  "action": {
+                    "method": "setTitle",
+                    "title": "Account"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "core/text_list",
+              "name": "before_body_end",
+              "as": "before_body_end",
+              "translate": "label",
+              "label": "Page Bottom",
+              "block": {
+                "type": "page/html_cookieNotice",
+                "name": "global_cookie_notice",
+                "as": "global_cookie_notice",
+                "template": "page/html/cookienotice.phtml",
+                "before": "-"
+              }
+            }
+          ]
+        },
+        {
+          "type": "core/profiler",
+          "output": "toHtml",
+          "name": "core_profiler"
+        }
+      ]
+    },
+    "print": {
+      "translate": "label",
+      "module": "page",
+      "label": "All Pages (Print Version)",
+      "block": {
+        "type": "page/html",
+        "name": "root",
+        "output": "toHtml",
+        "template": "page/print.phtml",
+        "block": [
+          {
+            "type": "page/html_header",
+            "name": "header",
+            "as": "header"
+          },
+          {
+            "type": "page/html_head",
+            "name": "head",
+            "as": "head",
+            "action": [
+              {
+                "method": "addJs",
+                "script": "prototype/prototype.js"
+              },
+              {
+                "method": "addJs",
+                "script": "mage/translate.js"
+              },
+              {
+                "method": "addJs",
+                "script": "lib/ccard.js"
+              },
+              {
+                "method": "addJs",
+                "script": "prototype/validation.js"
+              },
+              {
+                "method": "addJs",
+                "script": "varien/js.js"
+              },
+              {
+                "method": "addCss",
+                "stylesheet": "css/styles.css"
+              },
+              {
+                "method": "addItem",
+                "type": "skin_css",
+                "name": "css/styles-ie.css",
+                "params": "",
+                "if": "lt IE 8"
+              },
+              {
+                "method": "addCss",
+                "stylesheet": "css/widgets.css"
+              },
+              {
+                "method": "addCss",
+                "stylesheet": "css/print.css",
+                "params": "media=\"print\""
+              },
+              {
+                "method": "addItem",
+                "type": "js",
+                "name": "lib/ds-sleight.js",
+                "params": "",
+                "if": "lt IE 7"
+              }
+            ]
+          },
+          {
+            "type": "core/text_list",
+            "name": "content",
+            "as": "content",
+            "translate": "label",
+            "label": "Main Content Area"
+          }
+        ]
+      }
+    },
+    "page_empty": {
+      "translate": "label",
+      "label": "All Empty Layout Pages",
+      "reference": {
+        "name": "root",
+        "action": [
+          {
+            "method": "setTemplate",
+            "template": "page/empty.phtml"
+          },
+          {
+            "method": "setIsHandle",
+            "applied": "1"
+          },
+          {
+            "method": "setLayoutCode",
+            "name": "empty"
+          }
+        ]
+      }
+    },
+    "page_one_column": {
+      "translate": "label",
+      "label": "All One-Column Layout Pages",
+      "reference": {
+        "name": "root",
+        "action": [
+          {
+            "method": "setTemplate",
+            "template": "page/1column.phtml"
+          },
+          {
+            "method": "setIsHandle",
+            "applied": "1"
+          },
+          {
+            "method": "setLayoutCode",
+            "name": "one_column"
+          }
+        ]
+      }
+    },
+    "page_two_columns_left": {
+      "translate": "label",
+      "label": "All Two-Column Layout Pages (Left Column)",
+      "reference": {
+        "name": "root",
+        "action": [
+          {
+            "method": "setTemplate",
+            "template": "page/2columns-left.phtml"
+          },
+          {
+            "method": "setIsHandle",
+            "applied": "1"
+          },
+          {
+            "method": "setLayoutCode",
+            "name": "two_columns_left"
+          }
+        ]
+      }
+    },
+    "page_two_columns_right": {
+      "translate": "label",
+      "label": "All Two-Column Layout Pages (Right Column)",
+      "reference": {
+        "name": "root",
+        "action": [
+          {
+            "method": "setTemplate",
+            "template": "page/2columns-right.phtml"
+          },
+          {
+            "method": "setIsHandle",
+            "applied": "1"
+          },
+          {
+            "method": "setLayoutCode",
+            "name": "two_columns_right"
+          }
+        ]
+      }
+    },
+    "page_three_columns": {
+      "translate": "label",
+      "label": "All Three-Column Layout Pages",
+      "reference": {
+        "name": "root",
+        "action": [
+          {
+            "method": "setTemplate",
+            "template": "page/3columns.phtml"
+          },
+          {
+            "method": "setIsHandle",
+            "applied": "1"
+          },
+          {
+            "method": "setLayoutCode",
+            "name": "three_columns"
+          }
+        ]
+      }
+    }
+  }
+}

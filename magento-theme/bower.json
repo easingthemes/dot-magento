@@ -1,0 +1,16 @@
+{
+  "name": "magento-theme",
+  "version": "1.0.0",
+  "homepage": "https://github.com/easingthemes/dot-magento",
+  "authors": [
+    "Dragan Filipovic <info@frontenddot.com>"
+  ],
+  "description": "Magento theme setup",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "uikit": "~2.16.0"
+  }
+}

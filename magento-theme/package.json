@@ -1,0 +1,48 @@
+{
+  "name": "magento-theme",
+  "version": "1.0.0",
+  "description": "Magento one page app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easingthemes/dot-magento.git"
+  },
+  "keywords": [
+    "Magento",
+    "Grunt"
+  ],
+  "author": "Dragan Filipovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easingthemes/dot-magento/issues"
+  },
+  "homepage": "https://github.com/easingthemes/dot-magento",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-symlink": "^0.3.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-convert": "^0.1.12",
+    "grunt-curl": "^2.1.0",
+    "grunt-file-append": "0.0.6",
+    "grunt-mkdir": "^0.1.2",
+    "grunt-wiredep": "^2.0.0",
+    "grunt-xmlpoke": "^0.7.0",
+    "jshint-stylish": "^1.0.0",
+    "libxmljs": "^0.13.0",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.4.0",
+    "xml2js": "^0.4.4",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
